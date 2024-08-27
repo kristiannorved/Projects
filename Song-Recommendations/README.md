@@ -1,0 +1,3 @@
+# Song-Recommendations
+This is a simple algorithm that analyses the [Million Songs Dataset](http://millionsongdataset.com/) to provide song recommendations to various users based off their personal interests as well as the interests of other users in the dataset.
+This algorithm uses the `popularity_recommender_py` class available online from [dvysardana](https://github.com/dvysardana/RecommenderSystems_PyData_2016/blob/master/Recommenders.py).
