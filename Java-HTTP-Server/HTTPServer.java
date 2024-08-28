@@ -23,12 +23,18 @@ public class HTTPServer {
             try (OutputStream out = socket.getOutputStream()) {
                 InputStream in = socket.getInputStream();
                 var line = new BufferedReader(new InputStreamReader(in)).readLine();
-                System.out.println(line);
+                String file = line.substring(5, line.length() - 9);
+                System.out.println(file);
+                if (file.equals("") || line.substring(5, 11).equals("images")) {
+                    file = "index.html";
+                } if (line.substring(5, 11).equals("images")) {
+                    System.out.println("Need image!");
+                }
 
                 // load HTML file from file directory
                 StringBuilder contentBuilder = new StringBuilder();
                 try {
-                    BufferedReader webpage = new BufferedReader(new FileReader("index.html"));
+                    BufferedReader webpage = new BufferedReader(new FileReader(file));
                     String str;
                     while ((str = webpage.readLine()) != null) {
                         contentBuilder.append(str);
@@ -55,20 +61,5 @@ public class HTTPServer {
                 e.printStackTrace();
             }
         }
-    }
-
-    /*private static HttpReq readRequest(Socket socket) throws IOException {
-        try (var in = new BufferedReader(new InputStreamReader(socket.getInputStream()))) {
-            var line = in.readLine();
-            System.out.println("Request line = " + line);
-        } catch (IOException e) {
-            //e.printStackTrace();
-            System.out.println("Whoops!");
-        }
-        return null;
-    }*/
-
-    private record HttpReq(String method, String url, Map<String, List<String>> headers, byte[] body) {
-
     }
 }
