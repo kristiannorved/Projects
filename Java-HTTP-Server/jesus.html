@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Jesus - Indooroopilly Evangelical Church</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/favicon.png?raw=true">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <!--we place the church logo on the left, then stack the navigation bar links
+        on the right-->
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><img class="logo" src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/logo.png?raw=true"/></a>
+            </div>
+            <div class="navbar-right">
+                <a class="navlink" href="jesus.html">JESUS</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ABOUT US 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="beliefs.html">OUR BELIEFS</a>
+                        <a href="team.html">OUR TEAM</a>
+                    </div>
+                </div> 
+                <a class="navlink" href="services.html">SERVICES</a>
+                <a class="navlink" href="contact.html">CONTACT</a>
+            </div>
+            <!--when in mobile view the navigation bar links disappear and are replaced
+            by a hamburger drop-down menu-->
+            <div class="ham">
+                <div class="ham-links" id="ham-links">
+                    <a href="jesus.html">JESUS</a>
+                    <a href="beliefs.html">OUR BELIEFS</a>
+                    <a href="team.html">OUR TEAM</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                    <i class="fa fa-bars 3x" onclick="hamburger()"></i>
+                </a>
+            </div>
+        </div>
+        <div class="welcome">
+            <img class="image" src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/bible2.jpg?raw=true"/>
+            <p class="other-heading">JESUS</p>
+        </div>
+        <!--the text for this page is adapted from an existing church, known as
+        "Maroochydore Presbyterian Church": please see references.doc in files folder
+        for more-->
+        <div class="text-block">
+            <p class="jesus-heading">Who is Jesus?</p>
+            <p class="jesus-subheading">We believe Jesus is the most important 
+                person you will ever meet. It would be our joy for you to join 
+                us in worshipping him.</p>
+            <p class="jesus-text">Two thousand years ago, in fulfilment of many 
+                prophecies made to the Jewish people, Jesus was born in the town
+                 of Bethlehem. Jesus was a human, just like us, but there was 
+                 something about him that makes him entirely different to us. 
+                 He was perfect! Jesus never rebelled against God's laws, and 
+                 never sinned.<br><br>
+                 In time, Jesus grew to be a man, and attracted 
+                 enormous crowds with his super-natural miracles. Jesus healed the 
+                 sick with a touch, calmed storms with a word, and even raised the 
+                 dead back to life! Again and again, Jesus publicly demonstrated 
+                 that he had power over nature, sickness, evil, and death. Again and
+                 again, Jesus publicly demonstrated that he had the power of 
+                 God!<br><br>
+                 Who was this Jesus? We're not left guessing, because on more than 
+                 one occasion Jesus explicitly stated that he was the Son of God! 
+                 Is that hard to believe? The religious leaders of the day thought 
+                 so too. They charged Jesus with blasphemy, condemned him to death, 
+                 and nailed him to a wooden cross where he died.<br><br>
+                 Many people thought this was the end of Jesus's ministry, but three days later, Jesus 
+                 proved that he was the Son of God by rising himself from the dead. 
+                 Hundreds of people saw the risen Jesus, the news spread like wildfire, 
+                 and the world has never been the same again.<br><br>
+                 What does Jesus want from you? He wants you to admit that you haven't lived your life 
+                 honouring and obeying God. He wants you to admit that you deserve 
+                 God's anger and punishment. He wants you to trust that he died on 
+                 the cross in your place taking the punishment that you deserve. And 
+                 he wants you to live your life joyfully following Him.<br><br>
+                 Shortly after conquering death, Jesus ascended back into Heaven, promising that one 
+                 day He will return. When He does, those who ignore or reject Jesus 
+                 will face God's just judgement in Hell, while those who trust in 
+                 Jesus will experience the eternal joy of Heaven.
+            </p>
+            <p class="jesus-final">Are you ready to meet Jesus?</p>
+        </div>
+        <!--simple footer with copyright information and link to facebook page-->
+        <div class="footer">
+            <div class="footer-left">
+                <p class="footer-text">© 2023 Indooroopilly Evangelical Church. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com" target="_blank"><img class="facebook" 
+                    src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/facebook.png?raw=true"/></a>
+            </div>
+        </div>
+    </body>
+</html>

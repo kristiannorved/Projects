@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Beliefs - Indooroopilly Evangelical Church</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/favicon.png?raw=true">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <!--we place the church logo on the left, then stack the navigation bar links
+        on the right-->
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><img class="logo" src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/logo.png?raw=true"/></a>
+            </div>
+            <div class="navbar-right">
+                <a class="navlink" href="jesus.html">JESUS</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ABOUT US 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="beliefs.html">OUR BELIEFS</a>
+                        <a href="team.html">OUR TEAM</a>
+                    </div>
+                </div> 
+                <a class="navlink" href="services.html">SERVICES</a>
+                <a class="navlink" href="contact.html">CONTACT</a>
+            </div>
+            <!--when in mobile view the navigation bar links disappear and are replaced
+            by a hamburger drop-down menu-->
+            <div class="ham">
+                <div class="ham-links" id="ham-links">
+                    <a href="jesus.html">JESUS</a>
+                    <a href="beliefs.html">OUR BELIEFS</a>
+                    <a href="team.html">OUR TEAM</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                    <i class="fa fa-bars 3x" onclick="hamburger()"></i>
+                </a>
+            </div>
+        </div>
+        <div class="welcome">
+            <img class="image" src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/bible3.jpg?raw=true"/>
+            <p class="other-heading">OUR BELIEFS</p>
+        </div>
+        <!--the text for this page is adapted from an existing church, known as "St Lucia
+        Bible Church": please see references.doc in files folder for more-->
+        <div class="text-block">
+            <p class="beliefs-heading">We believe that we have the greatest news imaginable to
+                share with you. Here's some specifics:</p>
+            <p class="beliefs-subheading"><em>THE BIBLE</em></p>
+            <ul class="list">
+                <li>The Bible is the divine inspiration and trustworthiness of the Holy Scripture
+                     as originally given, and their supreme authority in all matters of faith and 
+                     conduct.</li>
+            </ul>
+            <p class="beliefs-subheading"><em>GOD</em></p>
+            <ul class="list">
+                <li>The unity of the Father, Son and Holy Spirit in the Godhead.</li>
+                <li>The sovereign work of God in creation, revelation, redemption, judgment and 
+                    establishing His kingdom.</li>
+            </ul>
+            <p class="beliefs-subheading"><em>HUMANITY</em></p>
+            <ul class="list">
+                <li>The creation of men and women together in the image of God and together 
+                    having dominion over the created order.</li>
+                <li>The universal sinfulness and guilt of human nature since the fall, rendering 
+                    all people subject to God's wrath and condemnation, and unable to turn 
+                    themselves to God without the prior regenerating work of God's Spirit, who 
+                    convicts the world of sin, righteousness and judgment.</li>
+            </ul>
+            <p class="beliefs-subheading"><em>JESUS CHRIST AND SALVATION</em></p>
+            <ul class="list">
+                <li>The conception of Jesus Christ by the Holy Spirit, and his birth by the 
+                    virgin Mary. He is both God and sinless man.</li>
+                <li>Redemption from the guilt, penalty and power of sin, only through the 
+                    sacrificial death, as our representative and substitute, of Jesus Christ, the 
+                    incarnate Son of God, demonstrating God's love to us most perfectly and his 
+                    victory over Satan and his forces.</li>
+                <li>The physical resurrection of Jesus Christ from the dead in flesh, bones and 
+                    body.</li>
+                <li>The necessity of the work of the Holy Spirit to make the death of Christ 
+                    effective in individual sinners, granting them repentance towards God and faith
+                    in Jesus Christ, so that salvation is entirely of God's grace and not of their
+                    merit or good works.</li>
+                <li>The expectation of the personal return of the Lord Jesus Christ in glory to 
+                    judge the living and the dead.</li>
+            </ul>
+        </div>
+        <!--we add some whitespace between the text and the footer-->
+        <div class="space"></div>
+        <!--simple footer with copyright information and link to facebook page-->
+        <div class="footer">
+            <div class="footer-left">
+                <p class="footer-text">© 2023 Indooroopilly Evangelical Church. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com" target="_blank"><img class="facebook" 
+                    src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/facebook.png?raw=true"/></a>
+            </div>
+        </div>
+    </body>
+</html>

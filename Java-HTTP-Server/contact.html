@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact Us - Indooroopilly Evangelical Church</title>
+        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="icon" type="image/x-icon" href="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/favicon.png?raw=true">
+        <script type="text/javascript" src="script.js"></script>
+    </head>
+    <body>
+        <!--we place the church logo on the left, then stack the navigation bar links
+        on the right-->
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="index.html"><img class="logo" src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/logo.png?raw=true"/></a>
+            </div>
+            <div class="navbar-right">
+                <a class="navlink" href="jesus.html">JESUS</a>
+                <div class="dropdown">
+                    <button class="dropbtn">ABOUT US 
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="beliefs.html">OUR BELIEFS</a>
+                        <a href="team.html">OUR TEAM</a>
+                    </div>
+                </div> 
+                <a class="navlink" href="services.html">SERVICES</a>
+                <a class="navlink" href="contact.html">CONTACT</a>
+            </div>
+            <!--when in mobile view the navigation bar links disappear and are replaced
+            by a hamburger drop-down menu-->
+            <div class="ham">
+                <div class="ham-links" id="ham-links">
+                    <a href="jesus.html">JESUS</a>
+                    <a href="beliefs.html">OUR BELIEFS</a>
+                    <a href="team.html">OUR TEAM</a>
+                    <a href="services.html">SERVICES</a>
+                    <a href="contact.html">CONTACT</a>
+                </div>
+                <a href="javascript:void(0);" class="icon" onclick="hamburger()">
+                    <i class="fa fa-bars 3x" onclick="hamburger()"></i>
+                </a>
+            </div>
+        </div>
+        <div class="welcome">
+            <img class="image" src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/contact.jpg?raw=true"/>
+            <p class="contact-heading">GET IN TOUCH</p>
+            <p class="contact-subheading">Question and comments are more than welcome!</p>
+        </div>
+        <div class="contact">
+            <div class="contact-left">
+                <p class="info1">Indooroopilly Evangelical Church</p>
+                <p class="info2">10 Westminster Road<br>Indooroopilly QLD 4068<br>Australia
+                    <br>Email : enquire@iec.com.au
+                    <br>Phone : (07)12345678
+                </p>
+                <p class="info1">Giving</p>
+                <p class="info2">BSB : 123456<br>Acct. Number : 12345678
+                    <br>Acct. Name : Indooroopilly<br>Evangelical Church
+                </p>
+            </div>
+            <!--this section features a workable contact form: name, email, and message are stored.
+            if each section of the contact form is filled (and also a valid email address is given)
+            an alert is sent to the user notifying them that their message has been sent successfully.
+            otherwise, the user is prompted to enter their details correctly.-->
+            <div class="contact-right">
+                <p class="service-heading">Contact Form</p>
+                <form >
+                    <label class="form-heading" for="fname">Name</label>
+                    <input type="text" id="name" name="firstname" placeholder="Your name...">
+
+                    <label class="form-heading" for="lname">Email</label>
+                    <input type="text" id="email" name="lastname" placeholder="Your email...">
+                
+                    <label class="form-heading" for="subject">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write a message..."></textarea>
+                
+                    <button class="submit-button" onclick="submitForm()">Submit</button>
+                </form>
+                <!--a map of the church made possible via a google maps plugin-->
+                <div mobile-map>
+                    <p class="map-heading">Where We Are</p>
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3538.9512280960107!2d152.9744390741098!3d-27.50189221807624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9150572946e967%3A0x5c02d0fdd6a10968!2s100%20Westminster%20Rd%2C%20Indooroopilly%20QLD%204068!5e0!3m2!1sen!2sau!4v1684226042240!5m2!1sen!2sau"></iframe>
+                </div>
+            </div>
+        </div>
+        <!--we add some space between the map and the footer on mobile view-->
+        <div class="mobile-space"></div>
+        <!--simple footer with copyright information and link to facebook page-->
+        <div class="footer">
+            <div class="footer-left">
+                <p class="footer-text">© 2023 Indooroopilly Evangelical Church. All rights reserved.</p>
+            </div>
+            <div class="footer-right">
+                <a href="https://www.facebook.com" target="_blank"><img class="facebook" 
+                    src="https://github.com/kristiannorved/Projects/blob/main/Java-HTTP-Server/images/facebook.png?raw=true"/></a>
+            </div>
+        </div>
+    </body>
+</html>

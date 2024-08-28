@@ -6,8 +6,10 @@ import java.io.OutputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.io.InputStreamReader;
-import java.util.Map;
-import java.util.List;
+import javax.imageio.ImageIO;
+import java.io.File;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 
 public class HTTPServer {
     public static void main(String[] args) throws IOException {
@@ -24,14 +26,11 @@ public class HTTPServer {
                 InputStream in = socket.getInputStream();
                 var line = new BufferedReader(new InputStreamReader(in)).readLine();
                 String file = line.substring(5, line.length() - 9);
-                System.out.println(file);
-                if (file.equals("") || line.substring(5, 11).equals("images")) {
+                if (file.equals("")) {
                     file = "index.html";
-                } if (line.substring(5, 11).equals("images")) {
-                    System.out.println("Need image!");
-                }
-
-                // load HTML file from file directory
+                } 
+                
+                // load script file from file directory
                 StringBuilder contentBuilder = new StringBuilder();
                 try {
                     BufferedReader webpage = new BufferedReader(new FileReader(file));
@@ -43,15 +42,15 @@ public class HTTPServer {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                String html = contentBuilder.toString();
+                String content = contentBuilder.toString();
 
                 // construct valid HTML response message
                 final String CRLF = "\r\n"; // 13, 10
                 String response = 
                     "HTTP/1.1 200 OK" + CRLF + // status line: HTTP_VERSION RESPONSE_CODE RESPONSE_MESSAGE
-                    "Content-Length: " + html.getBytes().length + CRLF + // header
+                    "Content-Length: " + content.getBytes().length + CRLF + // header
                     CRLF + 
-                    html + 
+                    content + 
                     CRLF + CRLF;
 
                 // write HTML message to the client
