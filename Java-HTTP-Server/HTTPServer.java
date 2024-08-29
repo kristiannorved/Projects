@@ -37,6 +37,7 @@ public class HTTPServer {
                     String str;
                     while ((str = webpage.readLine()) != null) {
                         contentBuilder.append(str);
+                        contentBuilder.append("\n");
                     }
                     webpage.close();
                 } catch (IOException e) {
