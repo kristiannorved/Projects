@@ -19,9 +19,10 @@ public class ServerThread extends Thread {
 
     @Override
     public void run() {
-        while (true) {
+        while (server.isBound() && !server.isClosed()) {
             // accept connection from a client
             try (Socket socket = server.accept()) {
+                System.out.println("Connection accepted: " + socket.getInetAddress());
                 OutputStream out = socket.getOutputStream();
                 InputStream in = socket.getInputStream();
                 var line = new BufferedReader(new InputStreamReader(in)).readLine();
